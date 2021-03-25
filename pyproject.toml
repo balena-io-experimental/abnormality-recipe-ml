@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "abnormality-recipe-ml"
+version = "0.1.0"
+description = ""
+authors = ["Pranas Ziaukas <pranas@balena.io>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+river = {git = "https://github.com/online-ml/river"}
+gradio = "^1.6.4"
+llvmlite = "~0.34"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
