@@ -48,7 +48,9 @@ def launch_interface():
 
 def start():
     """Initialize the model and expose."""
+    print('Initializing the model...')
     train_model()
+    print('Launching the interface...')
     return launch_interface()
 
 
