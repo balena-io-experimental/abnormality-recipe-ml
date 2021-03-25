@@ -13,6 +13,9 @@ llvmlite = "~0.34"
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
 
+[tool.poetry.scripts]
+start = 'abnormality_recipe_ml.main:start'
+
 [build-system]
 requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
