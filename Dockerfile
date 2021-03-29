@@ -1,13 +1,10 @@
-FROM python:3.8-alpine
+FROM balenablocks/librosa-aarch64:raspberrypi4-64
 
-WORKDIR /usr/src/app
+COPY . /app
+WORKDIR /app
 
-RUN apk add --update alpine-sdk
-RUN pip install poetry
+RUN pip install git+https://github.com/online-ml/river --upgrade
+RUN pip install gradio
 
 EXPOSE 7860
-
-COPY . ./
-RUN poetry install
-
-CMD ["poetry", "run", "start"]
+CMD ["python", "abnormality_recipe_ml/main.py"]

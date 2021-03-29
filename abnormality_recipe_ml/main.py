@@ -43,6 +43,7 @@ def launch_interface():
             gr.outputs.Label(label='Prediction'),
             gr.outputs.Textbox(label='Heuristics (debug)'),
         ],
+        server_name="0.0.0.0",
     ).launch()
 
 
